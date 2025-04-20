@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Login do Time</h2>
+  {% if erro %}
+    <p style="color:red;">{{ erro }}</p>
+  {% endif %}
+  <form method="post" action="/login">
+    <label>Nome do time:</label>
+    <input type="text" name="nome">
+    <button type="submit">Entrar</button>
+  </form>
+{% endblock %}
